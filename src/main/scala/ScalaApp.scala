@@ -1,7 +1,7 @@
 import org.apache.spark.{SparkConf, SparkContext}
 
 object ScalaApp extends App {
-  val logFile = "OlympicAthletes.csv"
+  val logFile = "src/main/resources/OlympicAthletes.csv"
   val conf = new SparkConf().setMaster("local[2]").setAppName("OlympicMedals")
   val sc = new SparkContext(conf)
   val file = sc.textFile(logFile)
